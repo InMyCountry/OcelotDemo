@@ -4,7 +4,7 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:50910",
+      "applicationUrl": "http://localhost:51136",
       "sslPort": 0
     }
   },
@@ -17,11 +17,11 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "OcelotDemo": {
+    "OcelotApiA": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "a/values",
-      "applicationUrl": "http://localhost:1000",
+      "launchUrl": "api/values",
+      "applicationUrl": "http://localhost:1001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

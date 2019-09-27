@@ -1,0 +1,48 @@
+{
+
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/{uri}", //实际访问的路由
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1001
+        },
+        {
+          "Host": "localhost",
+          "Port": 1002
+        }
+      ],
+      "UpstreamPathTemplate": "/a/{uri}", //上游路由
+      "UpstreamHttpMethod": [ "Get" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{uri}", //实际访问的路由
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1002
+        }
+      ],
+      "UpstreamPathTemplate": "/b/{uri}", //上游路由
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+
+    "ServiceDiscoveryProvider": {
+
+      "Host": "localhost",
+
+      "Port": 8500
+
+    }
+  }
+
+}
